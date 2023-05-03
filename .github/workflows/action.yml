@@ -7,6 +7,8 @@ jobs:
     steps:
       - name: Run a shell command
         run: echo "Hello, world!"
+      - name: managment command on runner  
+        run: pwd;ls -la;df-h ;
 
 
   build:
