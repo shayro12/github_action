@@ -17,6 +17,8 @@ jobs:
         run: cat /proc/meminfo
       - name: managment command on runner  
         run: cat /proc/cpuinfo
+      - name: docker ?
+        run: docker image ls  
               
 
 
