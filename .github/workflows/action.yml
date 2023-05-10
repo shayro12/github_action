@@ -3,4 +3,4 @@ on: [push]
 
 jobs:
   call-workflow-from_main:
-    uses: shayro12/github_actions/.github/workflows/action.yml@main
+    uses: shayro12/github_action/.github/workflows/action.yml@main
