@@ -27,10 +27,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Build the Docker image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: false
-          tags: your-docker-username/your-docker-repo-name:latest
+      - run: cat branch_name.txt
+      # - name: Build the Docker image
+      #   uses: docker/build-push-action@v4
+      #   with:
+      #     context: .
+      #     push: false
+      #     tags: your-docker-username/your-docker-repo-name:latest
