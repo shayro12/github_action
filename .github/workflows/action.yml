@@ -16,16 +16,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    if: ${{ github.ref_name == 'main' }}
     steps:
       - uses: actions/checkout@v3
       - run: cat branch_name.txt
-      - run: echo ${{vars}}
-  #     - name: Build the Docker image
-  #       uses: docker/build-push-action@v4
-  #       with:
-  #         context: .
-  #         push: false
-  #         tags: your-docker-username/your-docker-repo-name:latest
-
-          
-
