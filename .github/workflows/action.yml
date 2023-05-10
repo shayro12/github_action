@@ -2,38 +2,5 @@ name: My Workflow
 on: [push]
 
 jobs:
-  my-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run a shell command
-        run: echo "Hello, world!"
-      - name: managment command on runner  
-        run: pwd
-      - name: managment command on runner  
-        run: ls -la
-      - name: managment command on runner  
-        run: df -h 
-      - name: managment command on runner  
-        run: cat /proc/meminfo
-      - name: managment command on runner  
-        run: cat /proc/cpuinfo
-      - name: docker ?
-        run: docker image ls  
-              
-
-
-
-  build:
-    runs-on: ubuntu-latest
-    if: ${{ github.ref_name == 'main' }}
-    steps:
-      - uses: actions/checkout@v3
-      - run: cat branch_name.txt
-      # - run: printenv
-      
-      # - name: Build the Docker image
-      #   uses: docker/build-push-action@v4
-      #   with:
-      #     context: .
-      #     push: false
-      #     tags: your-docker-username/your-docker-repo-name:latest
+  call-workflow-from_main:
+    uses: shayro12/github_actions/.github/workflows/action.yml@main
