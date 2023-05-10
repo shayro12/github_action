@@ -14,11 +14,11 @@ jobs:
       - run: cat /proc/cpuinfo
       - run: docker image ls
 
-  # build:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: cat branch_name.txt
   #     - name: Build the Docker image
   #       uses: docker/build-push-action@v4
   #       with:
